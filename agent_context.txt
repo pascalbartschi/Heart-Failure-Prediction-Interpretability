@@ -1,0 +1,56 @@
+Part 1. Heart Disease Prediction Dataset (20 Pts)
+For Part 1, we will provide you with train and test splits from the Kaggle Heart Failure Prediction
+Dataset aggregated from UCI Machine Learning Repository over Moodle.
+Q1: Exploratory Data Analysis (3 Pts)
+Get familiar with the dataset by:
+- exploring the different features, their distribution, and the labels (Q1.1. [1 Pt]).
+Check for common pitfalls like:
+- missing or nonsensical data, unusual feature distribution, outliers, or class imbalance, and
+describe how to handle them (Q1.2. [1 Pt]).
+After having familiarized yourself with the data,
+- explain how you preprocess the dataset for the remaining tasks of part 1 (Q1.3. [1 Pt]).
+Interpretability and explainability aim at gaining more insights about the data than just optimizing
+predictive performance.
+Q2: Logistic Lasso Regression (5 Pts)
+By design, linear models are interpretable due to the weights that intuitively provide feature
+importance values. Further, we can perform l1 regularization to sparsify weights, allowing us to
+understand which features do not contribute to the outcome. For this question,
+- fit a Lasso regression model with l1 regularization on the dataset (Q2.1. [1 Pt]).
+Additionally, to ensure comparability of feature coefficients,
+- describe which preprocessing steps are crucial (Q2.2. [1 Pt]).
+To quantify the performance of this model,
+- provide performance metrics such as f1-score or balanced accuracy (Q2.3. [1 Pt]).
+Lastly,
+- visualize the importance of the different features and argue how they contribute to the
+model's output (Q2.4. [1 Pt]).
+Consider the following setting: A researcher is interested in the important variables and their
+influence on the label. They have fitted the Logistic Lasso Regression to determine the important
+variables. Then, they train a Logistic Regression solely on these variables and use this model to
+make conclusions.
+- Elaborate why this would be a good or bad idea (Q2.5. [1 Pt]).
+Q3: Multi-Layer Perceptrons (5 Pts)
+While often reaching superior performance, MLPs are generally hard to interpret, and it is not
+straightforward to see what is happening within these models. We thus opt for post-hoc
+explainability methods such as SHAP1. Post-hoc explainability methods typically use some
+procedure during inference to find the feature importance per sample.
+- Similar to Q2, implement a simple MLP, train it on the dataset, and report test set
+performance (Q3.1. [2 Pt]).
+- Then, visualize SHAP explanations of the outputs of two positive and negative samples
+and feature importances of the overall model (Q3.2. [2 Pt]).
+- Are feature importances consistent across different predictions and compared to overall
+importance values? (Q3.3. [1 Pt]).
+Elaborate on your findings!
+Hint: There is an excellent SHAP library for python that provides many SHAP algorithms and
+visualizations out of the box.
+Q4: Neural Additive Models2 (7 Pts)
+Another way to make deep models more interpretable is by careful design of the architecture.
+One example of such a model is the Neural Additive Model (NAM), which is an instance of the
+class of Generalized Additive Models3 (GAM).
+- Read the paper about NAMs, implement the model, train it on the dataset (Q4.1. [3 Pt]).
+Like Q2-3, provide performance metrics on the test set.
+- Utilize the interpretability of NAMs to visualize the feature importances (Q4.2. [2 Pt]).
+Conceptually,
+- how does the model compare to Logistic Regression and MLPs? (Q4.3. [1 Pt]).
+Additionally,
+- why are NAMs more interpretable than MLPs despite being based on non-linear neural
+networks? (Q4.4. [1 Pt]).
