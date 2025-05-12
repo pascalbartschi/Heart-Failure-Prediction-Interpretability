@@ -4,4 +4,9 @@ This project uses the [Heart Failure Prediction Dataset](https://www.kaggle.com/
 
 The focus is on understanding the dataset and applying methods to enhance interpretability, such as Logistic Lasso Regression, SHAP, and Neural Additive Models.
 
-This is a test edit.
+To reproduce the results run the notebooks inside the `notebooks` directory in the following order:
+
+1. `q1-eda.ipynb` (Exploratory Data Analysis)
+2. `q2-lr.ipynb`  (Logistic Lasso Regression)
+3. `q3-mlp.ipynb` (Multilayer Perceptron)
+4. `q4-nam.ipynb` (Neural Additive Model)
